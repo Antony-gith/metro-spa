@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>METRO SPA - The Beauty Palace</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
+body{background:#f2f2f2;color:#333;}
+header{text-align:center;padding:40px 20px;background:linear-gradient(135deg,#00ff7f,#32cd32);color:black;}
+header h1{font-family:'Playfair Display',serif;font-size:3rem;margin-bottom:5px;text-decoration:underline;}
+header p{font-size:1.5rem;opacity:0.9;margin-bottom:20px;text-decoration:underline;}
+#map-section{width:100%;text-align:center;margin-bottom:40px;}
+iframe#map{width:100%;height:350px;border:0;border-radius:15px;}
+.get-directions-btn{margin-top:15px;padding:12px 25px;border-radius:50px;background:none;color:#00ff7f;font-weight:bold;cursor:pointer;border:none;}
+.get-directions-btn:hover{color:#32cd32;transform:scale(1.05);}
+.contact-btn{margin-top:15px;padding:12px 25px;border-radius:50px;background:none;color:#000;font-weight:bold;cursor:pointer;border:none;margin-right:10px;}
+.contact-btn:hover{color:#32cd32;transform:scale(1.05);}
+section{padding:40px 20px;max-width:1200px;margin:auto;}
+section h2{text-align:center;font-family:'Playfair Display',serif;font-size:2.2rem;color:#00b33c;margin-bottom:30px;text-decoration:underline;}
+.columns-2{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.columns-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.card{background:#fff;padding:15px;border-radius:15px;text-align:center;border:1px solid #ccc;}
+.card h3{color:#00b33c;margin-bottom:10px;}
+.card p{margin-bottom:15px;font-weight:bold;}
+.btn{padding:10px 25px;border-radius:50px;font-weight:bold;background:linear-gradient(135deg,#00ff7f,#32cd32);color:white;cursor:pointer;border:none;}
+.btn:hover{transform:scale(1.05);}
+footer{text-align:center;padding:40px 20px;background:#222;color:#fff;}
+#about-us{padding:50px 20px;background:#e0f7e0;border-top:2px solid #00ff7f;}
+#about-us h2{color:#00b33c;text-decoration:underline;}
+#about-us p{margin-bottom:15px;}
+#whatsapp-btn{padding:12px 25px;border-radius:50px;background:linear-gradient(135deg,#00ff7f,#32cd32);color:white;font-weight:bold;text-decoration:none;display:inline-block;margin-top:15px;}
+@media(max-width:768px){.columns-2,.columns-4{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header>
+<h1>METRO SPA</h1>
+<p>The Beauty Palace</p>
+</header>
+
+<!-- Map Section -->
+<div id="map-section">
+<iframe id="map" src="https://www.google.com/maps?q=Nakuru,+Kenya&output=embed" allowfullscreen="" loading="lazy"></iframe>
+<div style="margin-top:10px;">
+  <button class="contact-btn" onclick="scrollToAbout()">Contact</button>
+  <button class="get-directions-btn" onclick="openDirections()">Get Directions</button>
+</div>
+</div>
+
+<script>
+function openDirections(){
+  window.open("https://www.google.com/maps/dir/?api=1&destination=Nakuru,+Kenya", "_blank");
+}
+function scrollToAbout(){
+  document.getElementById('about-us').scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+<!-- Female Services & Lotions/Perfumes Section -->
+<section id="services-products">
+<div class="columns-2">
+  <!-- Female Services -->
+  <div>
+    <h2>Female Full-Body Services & Massage</h2>
+    <div class="columns-2">
+      <!-- 30 services -->
+      <div class="card"><h3>Facial Treatment</h3><p>KSh 3000</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Swedish Massage</h3><p>KSh 5000</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Deep Tissue Massage</h3><p>KSh 5500</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Hot Stone Massage</h3><p>KSh 6000</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Reflexology</h3><p>KSh 4000</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Body Scrub</h3><p>KSh 4500</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Hand Treatment</h3><p>KSh 1500</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Foot Treatment</h3><p>KSh 2000</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Hydrating Facial</h3><p>KSh 3500</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Anti-Aging Facial</h3><p>KSh 4000</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Acne Treatment</h3><p>KSh 3800</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Brightening Facial</h3><p>KSh 3700</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Manicure</h3><p>KSh 1200</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Pedicure</h3><p>KSh 1500</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Gel Nails</h3><p>KSh 2000</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Acrylic Nails</h3><p>KSh 2500</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Haircut Women</h3><p>KSh 1800</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Hair Coloring</h3><p>KSh 5000</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Highlights</h3><p>KSh 4500</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Balayage</h3><p>KSh 6000</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Hair Treatment</h3><p>KSh 4000</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Makeup Application</h3><p>KSh 5000</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Bridal Makeup</h3><p>KSh 12000</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Eye Lash Extensions</h3><p>KSh 3500</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Brow Shaping</h3><p>KSh 1200</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Brow Tint</h3><p>KSh 1000</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Waxing</h3><p>KSh 3000</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Facial Scrub</h3><p>KSh 3500</p><button class="btn">Book</button></div>
+      <div class="card"><h3>Body Wrap</h3><p>KSh 5500</p><button class="btn">Book</button></div>
+    </div>
+  </div>
+
+  <!-- Lotions & Perfumes -->
+  <div>
+    <h2>Body Lotions & Perfumes</h2>
+    <div class="columns-2">
+      <!-- 30 items -->
+      <div class="card"><h3>Lotus Lotion</h3><p>KSh 1200</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Vanilla Lotion</h3><p>KSh 1300</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Rose Perfume</h3><p>KSh 2500</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Lavender Perfume</h3><p>KSh 2700</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Jasmine Lotion</h3><p>KSh 1250</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Mango Lotion</h3><p>KSh 1300</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Shea Butter Lotion</h3><p>KSh 1500</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Coconut Lotion</h3><p>KSh 1200</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Almond Lotion</h3><p>KSh 1350</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Cherry Blossom Lotion</h3><p>KSh 1400</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Peach Lotion</h3><p>KSh 1300</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Gardenia Lotion</h3><p>KSh 1450</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Vanilla Perfume</h3><p>KSh 2600</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Rose Perfume</h3><p>KSh 2500</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Lavender Perfume</h3><p>KSh 2700</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Jasmine Perfume</h3><p>KSh 2650</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Coconut Perfume</h3><p>KSh 2800</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Almond Perfume</h3><p>KSh 2900</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Cherry Blossom Perfume</h3><p>KSh 3000</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Peach Perfume</h3><p>KSh 2850</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Gardenia Perfume</h3><p>KSh 2950</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Mango Perfume</h3><p>KSh 2750</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Shea Butter Perfume</h3><p>KSh 3100</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Lotus Perfume</h3><p>KSh 2700</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Lily Perfume</h3><p>KSh 2800</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Orange Blossom Perfume</h3><p>KSh 2750</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Mint Perfume</h3><p>KSh 2600</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Vanilla-Lavender Perfume</h3><p>KSh 2900</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Rose-Lily Perfume</h3><p>KSh 2950</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Jasmine-Mango Perfume</h3><p>KSh 3000</p><button class="btn">Order</button></div>
+      <div class="card"><h3>Peach-Coconut Perfume</h3><p>KSh 3100</p><button class="btn">Order</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- Men Hairstyles Section -->
+<section id="men-hairstyles">
+<h2>Men Hairstyles</h2>
+<div class="columns-4">
+  <div class="card"><h3>Fade</h3><p>KSh 1200</p><button class="btn">Book</button></div>
+  <div class="card"><h3>Crew Cut</h3><p>KSh 1000</p><button class="btn">Book</button></div>
+  <div class="card"><h3>Buzz Cut</h3><p>KSh 800</p><button class="btn">Book</button></div>
+  <div class="card"><h3>Pompadour</h3><p>KSh 1500</p><button class="btn">Book</button></div>
+  <div class="card"><h3>Undercut</h3><p>KSh 1400</p><button class="btn">Book</button></div>
+  <div class="card"><h3>Mohawk</h3><p>KSh 1600</p><button class="btn">Book</button></div>
+  <div class="card"><h3>Quiff</h3><p>KSh 1500</p><button class="btn">Book</button></div>
+  <div class="card"><h3>Caesar Cut</h3><p>KSh 1200</p><button class="btn">Book</button></div>
+  <div class="card"><h3>Taper</h3><p>KSh 1300</p><button class="btn">Book</button></div>
+  <div class="card"><h3>Flat Top</h3><p>KSh 1400</p><button class="btn">Book</button></div>
+  <div class="card"><h3>French Crop</h3><p>KSh 1250</p><button class="btn">Book</button></div>
+  <div class="card"><h3>Side Part</h3><p>KSh 1100</p><button class="btn">Book</button></div>
+  <div class="card"><h3>Textured Crop</h3><p>KSh 1300</p><button class="btn">Book</button></div>
+  <div class="card"><h3>Short Pompadour</h3><p>KSh 1500</p><button class="btn">Book</button></div>
+  <div class="card"><h3>Spiky Hair</h3><p>KSh 1400</p><button class="btn">Book</button></div>
+  <div class="card"><h3>Brush Up</h3><p>KSh 1350</p><button class="btn">Book</button></div>
+  <div class="card"><h3>Layered Cut</h3><p>KSh 1250</p><button class="btn">Book</button></div>
+  <div class="card"><h3>Textured Fade</h3><p>KSh 1300</p><button class="btn">Book</button></div>
+  <div class="card"><h3>Side Sweep</h3><p>KSh 1200</p><button class="btn">Book</button></div>
+  <div class="card"><h3>High Fade</h3><p>KSh 1500</p><button class="btn">Book</button></div>
+</div>
+</section>
+
+<!-- About Us Section -->
+<section id="about-us">
+<h2>About Us</h2>
+<p>Welcome to METRO SPA – The Beauty Palace. We provide premium spa, beauty, and grooming services to help you look and feel your best. Our trained professionals ensure an exceptional experience for every client.</p>
+<p>Contact Email: <a href="mailto:antonywambuamwangi@gmail.com">antonywambuamwangi@gmail.com</a></p>
+<p>Location: Nakuru, Kenya</p>
+<a id="whatsapp-btn" href="https://wa.me/254759933073" target="_blank">Chat on WhatsApp</a>
+</section>
+
+<footer>
+<p>&copy; 2025 METRO SPA. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
